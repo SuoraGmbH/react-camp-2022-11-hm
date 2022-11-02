@@ -1,16 +1,12 @@
 import TimeEntryView from "./components/TimeEntryView";
 import React from "react";
+import Welcome from "./components/Welcome";
 
 function App() {
-  const props: React.ComponentProps<typeof TimeEntryView> = {
-    comment: "hallo"
-  };
 
   return (
     <h1>
-      Hallo ich bin Nikita
-      <TimeEntryView comment="typescript ist knorke" />
-      <TimeEntryView {...props} />
+      <Welcome city="Bremen"/>
     </h1>
   );
 }
