@@ -1,8 +1,9 @@
 import TimeEntryView from "./components/TimeEntryView";
 import React from "react";
-import Welcome from "./components/Welcome";
 import { TimeEntry } from "./domain/TimeEntry";
 import TimeEntryForm from "./components/TimeEntryForm";
+import GithubRepoStats from "./components/GithubRepoStats";
+import DynamicGithubRepoStats from "./components/DynamicGithubRepoStats";
 
 function App() {
   const timeEntry: TimeEntry = {
@@ -16,6 +17,10 @@ function App() {
     <>
       <TimeEntryView timeEntry={timeEntry} />
       <TimeEntryForm />
+      <GithubRepoStats repoName="facebook/react" />
+      <div style={{ border: "3px solid pink" }}>
+        <DynamicGithubRepoStats />
+      </div>
     </>
   );
 }
