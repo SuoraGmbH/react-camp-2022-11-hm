@@ -25,11 +25,11 @@ const TimeEntryList: React.FunctionComponent = () => {
   ];
 
   return (
-    <div>
+    <>
       {timeEntries.map((timeEntry) => (
         <TimeEntryView key={timeEntry.id} timeEntry={timeEntry} />
       ))}
-    </div>
+    </>
   );
 };
 
