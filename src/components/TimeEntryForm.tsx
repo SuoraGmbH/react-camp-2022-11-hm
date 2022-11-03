@@ -4,11 +4,7 @@ const TimeEntryForm = () => {
   const [inputValue, setInputValue] = useState("");
 
   const handleChange: React.ChangeEventHandler<HTMLInputElement> = (event) => {
-    if(event.target.value.length > 3) {
-      setInputValue(event.target.value.substring(1));
-      return;
-    }
-    setInputValue(event.target.value.toUpperCase().replace('A', 'B'));
+    setInputValue(event.target.value);
   };
 
   const handleSubmit: React.FormEventHandler<HTMLFormElement> = (event) => {
