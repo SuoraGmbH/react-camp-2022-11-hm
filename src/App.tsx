@@ -16,11 +16,7 @@ function App() {
   return (
     <>
       <TimeEntryView timeEntry={timeEntry} />
-      <TimeEntryForm />
-      <GithubRepoStats repoName="facebook/react" />
-      <div style={{ border: "3px solid pink" }}>
-        <DynamicGithubRepoStats />
-      </div>
+      <TimeEntryForm  />
     </>
   );
 }
