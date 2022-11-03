@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { ThemedBox } from "./ThemedBox";
+import EffectOnlyOnce from "./EffectOnlyOnce";
 
 const TimeEntryForm = () => {
   const [inputValue, setInputValue] = useState("");
@@ -17,6 +19,7 @@ const TimeEntryForm = () => {
 
   return (
     <form onSubmit={handleSubmit}>
+      <EffectOnlyOnce />
       <input onChange={handleChange} value={inputValue} />
       <button
         type="button"
