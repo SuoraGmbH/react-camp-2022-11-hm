@@ -9,7 +9,10 @@ const TimeEntryForm = () => {
 
   const handleSubmit: React.FormEventHandler<HTMLFormElement> = (event) => {
     event.preventDefault();
-    console.log("Hallo Bremen!");
+    if(inputValue.length === 0) {
+      return
+    }
+    console.log("Hallo Bremen!", inputValue);
   };
 
   return (
