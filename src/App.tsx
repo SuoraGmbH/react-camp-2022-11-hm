@@ -4,6 +4,7 @@ import { TimeEntry } from "./domain/TimeEntry";
 import TimeEntryForm from "./components/TimeEntryForm";
 import GithubRepoStats from "./components/GithubRepoStats";
 import DynamicGithubRepoStats from "./components/DynamicGithubRepoStats";
+import TimeEntryList from "./components/TimeEntryList";
 
 function App() {
   const timeEntry: TimeEntry = {
@@ -17,6 +18,7 @@ function App() {
     <>
       <TimeEntryView timeEntry={timeEntry} />
       <TimeEntryForm  />
+      <TimeEntryList />
     </>
   );
 }
