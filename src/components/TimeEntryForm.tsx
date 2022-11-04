@@ -19,7 +19,7 @@ const TimeEntryForm: React.FunctionComponent<Props> = ({ onAddEntry }) => {
     if (inputValue.length === 0) {
       return;
     }
-    
+
     onAddEntry({
       id: new Date().toISOString(),
       start: new Date(),
@@ -31,7 +31,10 @@ const TimeEntryForm: React.FunctionComponent<Props> = ({ onAddEntry }) => {
   return (
     <form onSubmit={handleSubmit}>
       <EffectOnlyOnce />
-      <input onChange={handleChange} value={inputValue} />
+      <label>
+        Comment
+        <input onChange={handleChange} value={inputValue} />
+      </label>
       <button
         type="button"
         onClick={() => {
