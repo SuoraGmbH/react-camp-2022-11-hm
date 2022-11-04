@@ -5,6 +5,7 @@ import TimeEntryForm from "./components/TimeEntryForm";
 import GithubRepoStats from "./components/GithubRepoStats";
 import DynamicGithubRepoStats from "./components/DynamicGithubRepoStats";
 import TimeEntryList from "./components/TimeEntryList";
+import Crud from "./components/Crud";
 
 function App() {
   const timeEntry: TimeEntry = {
@@ -17,9 +18,9 @@ function App() {
   return (
     <>
       <TimeEntryView timeEntry={timeEntry} />
-      <TimeEntryForm  />
-      <TimeEntryList />
+      <Crud />
     </>
+
   );
 }
 

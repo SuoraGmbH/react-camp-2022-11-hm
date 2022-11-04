@@ -1,8 +1,13 @@
 import React, { useState } from "react";
 import { ThemedBox } from "./ThemedBox";
 import EffectOnlyOnce from "./EffectOnlyOnce";
+import { TimeEntry } from "../domain/TimeEntry";
 
-const TimeEntryForm = () => {
+interface Props {
+  onAddEntry: (timeEntry: TimeEntry) => void;
+}
+
+const TimeEntryForm: React.FunctionComponent<Props> = ({ onAddEntry }) => {
   const [inputValue, setInputValue] = useState("");
 
   const handleChange: React.ChangeEventHandler<HTMLInputElement> = (event) => {
@@ -11,10 +16,16 @@ const TimeEntryForm = () => {
 
   const handleSubmit: React.FormEventHandler<HTMLFormElement> = (event) => {
     event.preventDefault();
-    if(inputValue.length === 0) {
-      return
+    if (inputValue.length === 0) {
+      return;
     }
-    console.log("Hallo Bremen!", inputValue);
+    
+    onAddEntry({
+      id: new Date().toISOString(),
+      start: new Date(),
+      end: new Date(),
+      comment: inputValue,
+    });
   };
 
   return (

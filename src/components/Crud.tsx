@@ -5,6 +5,7 @@ import { TimeEntry } from "../domain/TimeEntry";
 
 const Crud: React.FunctionComponent = () => {
   const [timeEntries, setTimeEntries] = useState<TimeEntry[]>([]);
+
   return (
     <>
       <TimeEntryForm

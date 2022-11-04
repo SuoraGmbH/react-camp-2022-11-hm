@@ -6,12 +6,7 @@ interface Props {
 
 const GithubRepoStats = ({ repoName }: Props) => {
   const [stars, setStars] = useState(0);
-  const [fancyRepoName, setFancyRepoName] = useState(repoName);
-  useEffect(() => {
-    setTimeout(() => {
-      setFancyRepoName(repoName.toUpperCase());
-    }, 5000);
-  }, [repoName]);
+  // const {data} = useFetchData(`https://api.github.com/repos/${repoName}`)
 
   useEffect(() => {
     fetch(`https://api.github.com/repos/${repoName}`)
@@ -25,7 +20,6 @@ const GithubRepoStats = ({ repoName }: Props) => {
     <div>
       {repoName} hat {stars} Stars
       <hr />
-      Fancy: <h2>{fancyRepoName}</h2>
     </div>
   );
 };
